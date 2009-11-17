@@ -71,6 +71,8 @@ urlpatterns += patterns('',
     url (r'^search/$',
         view=proxy_search,
         name='proxy_search'),
+        
+    url(r'^comments/', include('django.contrib.comments.urls')),
 
     (r'', include('basic.blog.urls')),
 )
